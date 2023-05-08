@@ -34,7 +34,13 @@ Usage
 
 Example
 -------
+wget https://downloads.immortalwrt.org/releases/21.02.6/targets/x86/64/immortalwrt-21.02.6-x86-64-rootfs.tar.gz
+./build_cust.sh immortalwrt-21.02.6-x86-64-rootfs.tar.gz lxd
 
-./build_cust.sh openwrt-snapshot-r13592-x86-64-generic-rootfs.tar.gz plain
+lxc image import immortalwrt-*-lxd.tar.gz --alias openwrt1
+# Image imported with fingerprint: 25f650b291ea5ebd286a3e2466caa218a1532adb865988e59bf55c375411b50a
 
 You may be also interested in my wrapper scripts for running OpenWrt as lxc containers in Proxmox VE: https://github.com/DazzyWalkman/oplxc4pve
+
+---
+refer https://github.com/mikma/lxd-openwrt
